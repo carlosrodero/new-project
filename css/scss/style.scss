@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@for $i from 1 through 12 {
+  .span#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+@media (max-width: 960px) {
+  @for $i from 1 through 12 {
+    .m-span#{$i} {
+      grid-column: span #{$i};
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  @for $i from 1 through 12 {
+    .s-span#{$i} {
+      grid-column: span #{$i};
+      margin-top: 20px;
+    }
+  }
+}
