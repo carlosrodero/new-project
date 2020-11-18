@@ -44,7 +44,7 @@ gulp.task('mainjs', gulpJS); // Gulp task for merge js
 function pluginsJS() {
   return gulp
       .src([
-          './node_modules/jquery/dist/jquery.min.js',
+          // './node_modules/jquery/dist/jquery.min.js',
       ])
       .pipe(concat('plugins.js'))
       .pipe(gulp.dest('./js/'))
